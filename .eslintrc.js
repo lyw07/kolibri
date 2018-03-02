@@ -24,22 +24,22 @@ module.exports = {
     'eslint:recommended',
     'prettier',
     'plugin:vue/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
+//     'plugin:import/errors',
+//     'plugin:import/warnings',
   ],
   plugins: ['import', 'vue'],
-  settings: {
-    'import/resolver': {
-      [path.resolve(
-        path.join(path.dirname(__filename), './frontend_build/src/alias_import_resolver.js')
-      )]: {
-        extensions: ['.js', '.vue'],
-      },
-    },
-  },
+//   settings: {
+//     'import/resolver': {
+//       [path.resolve(
+//         path.join(path.dirname(__filename), './frontend_build/src/alias_import_resolver.js')
+//       )]: {
+//         extensions: ['.js', '.vue'],
+//       },
+//     },
+//   },
   rules: {
     'comma-style': 2,
-
+    
     'vue/no-dupe-keys': 2,
     'vue/no-reserved-keys': 2,
     'vue/no-shared-component-data': 2,
