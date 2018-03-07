@@ -9,18 +9,18 @@ steps:
 
   - wait
 
-  # - label: Build kolibri windows installer
-  #   command: .buildkite/build_windows_installer.sh
+  - label: Build kolibri windows installer
+    command: .buildkite/build_windows_installer.sh
 
-  # - wait
+  - wait
 
-  # - label: Build the Android APK file
-  #   command: mkdir -p dist && .buildkite/build_apk.sh
+  - label: Build the Android APK file
+    command: mkdir -p dist && .buildkite/build_apk.sh
 
   - wait
 
   - label: Upload artifacts
-    command: docker image prune -f
+    command: .buildkite/setup_and_upload_artifact.sh && docker image prune -f
 
   - wait
 
